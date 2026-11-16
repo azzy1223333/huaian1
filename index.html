@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b6b6b">
+  <meta name="description" content="《槐安里：未寄出的全家福》——一款中式怪核复古网页 ARG。">
+  <title>槐安里·我们的家 — 网页存档</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="effects-on">
+
+  <!-- 老式桌面 -->
+  <div class="desktop" aria-hidden="true">
+    <div class="desktop-watermark">槐安里档案修复计划<br><span>HUAI'ANLI ARCHIVE / 1999—2001</span></div>
+  </div>
+
+  <!-- 浏览器外壳 -->
+  <div class="browser-window" id="browser-window">
+    <div class="titlebar">
+      <div class="titlebar-left">
+        <span class="app-icon" aria-hidden="true">e</span>
+        <span class="titlebar-text" id="window-title">槐安里·我们的家 - Microsoft Internet Explorer</span>
+      </div>
+      <div class="titlebar-buttons">
+        <button type="button" data-action="fake-minimize" aria-label="最小化">_</button>
+        <button type="button" data-action="fake-maximize" aria-label="最大化">□</button>
+        <button type="button" data-action="fake-close" aria-label="关闭" class="close-box">×</button>
+      </div>
+    </div>
+
+    <div class="menubar">
+      <button type="button" data-menu="file">文件(F)</button>
+      <button type="button" data-menu="edit">编辑(E)</button>
+      <button type="button" data-menu="view">查看(V)</button>
+      <button type="button" data-menu="favorites">收藏(A)</button>
+      <button type="button" data-menu="tools">工具(T)</button>
+      <button type="button" data-menu="help">帮助(H)</button>
+      <span class="menubar-note">离线档案 · 无网络连接</span>
+    </div>
+
+    <div class="toolbar" role="toolbar" aria-label="浏览器工具栏">
+      <button type="button" class="tb-btn" data-action="back" title="后退">
+        <span class="tb-glyph">◀</span><span class="tb-label">后退</span>
+      </button>
+      <button type="button" class="tb-btn" data-action="forward" title="前进">
+        <span class="tb-glyph">▶</span><span class="tb-label">前进</span>
+      </button>
+      <button type="button" class="tb-btn" data-action="stop" title="停止">
+        <span class="tb-glyph">×</span><span class="tb-label">停止</span>
+      </button>
+      <button type="button" class="tb-btn" data-action="refresh" title="刷新">
+        <span class="tb-glyph">↻</span><span class="tb-label">刷新</span>
+      </button>
+      <button type="button" class="tb-btn" data-action="home" title="主页">
+        <span class="tb-glyph">⌂</span><span class="tb-label">主页</span>
+      </button>
+        <span class="toolbar-sep" aria-hidden="true"></span>
+      <button type="button" class="tb-btn" data-action="open-search" title="站内搜索">
+        <span class="tb-glyph">⌕</span><span class="tb-label">搜索</span>
+      </button>
+      <button type="button" class="tb-btn" data-action="open-notebook" title="线索与底片">
+        <span class="tb-glyph">▤</span><span class="tb-label">线索本</span>
+      </button>
+      <div class="toolbar-spacer"></div>
+      <button type="button" class="tb-btn" data-action="toggle-audio" id="audio-btn" title="开启/关闭环境音">
+        <span class="tb-glyph" id="audio-glyph">♪</span><span class="tb-label" id="audio-label">声音</span>
+      </button>
+      <button type="button" class="tb-btn" data-action="toggle-effects" id="effects-btn" title="降低闪烁与噪点">
+        <span class="tb-glyph">▦</span><span class="tb-label" id="effects-label">特效</span>
+      </button>
+      <button type="button" class="tb-btn maintenance-btn" data-action="open-dev" title="站点维护">
+        <span class="tb-glyph">⚒</span><span class="tb-label">维护</span>
+      </button>
+    </div>
+
+    <div class="addressbar">
+      <label for="address-input">地址(D)</label>
+      <div class="address-wrap">
+        <span class="address-icon" aria-hidden="true">e</span>
+        <input id="address-input" type="text" spellcheck="false" autocomplete="off"
+               aria-label="网页地址" value="http://www.huai-an-li.net/index.htm">
+      </div>
+      <button type="button" class="go-btn" data-action="go">转到</button>
+    </div>
+
+    <div class="browser-body">
+      <main class="page-scroll" id="page-view" tabindex="-1"></main>
+    </div>
+
+    <div class="statusbar">
+      <div class="status-left">
+        <span id="status-message">完成</span>
+        <span class="status-lock" id="save-status">本地存档已连接</span>
+      </div>
+      <div class="status-right">
+        <button type="button" class="status-chip" data-action="open-notebook" title="查看底片与线索">
+          <span class="chip-dot" aria-hidden="true"></span>底片 <b id="fragment-count">0</b>/7
+        </button>
+        <span class="status-zone"><span class="zone-dot" aria-hidden="true"></span><span id="zone-label">档案区</span></span>
+        <span class="status-clock" id="status-clock">2001-09-14</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-root"></div>
+  <div class="crt-overlay" id="crt-overlay" aria-hidden="true"></div>
+  <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+  <noscript>
+    <div class="noscript-warning">此网页需要启用 JavaScript 才能浏览。请使用支持 JavaScript 的浏览器，并将屏幕分辨率设为 800×600。</div>
+  </noscript>
+
+  <script src="js/content.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

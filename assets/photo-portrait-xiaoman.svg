@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="沈小满的寻人启事照片">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c2bba5"/>
+      <stop offset=".55" stop-color="#948d7a"/>
+      <stop offset="1" stop-color="#625e51"/>
+    </linearGradient>
+    <linearGradient id="windowLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6e9bd" stop-opacity=".9"/>
+      <stop offset=".55" stop-color="#e2d19d" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#e2d19d" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7e2d2"/>
+      <stop offset=".55" stop-color="#cbc6b3"/>
+      <stop offset="1" stop-color="#9e9987"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9c5ae"/>
+      <stop offset=".7" stop-color="#c6ad91"/>
+      <stop offset="1" stop-color="#a98e74"/>
+    </linearGradient>
+    <radialGradient id="faceLight" cx=".36" cy=".32" r=".7">
+      <stop offset="0" stop-color="#f3dfc3" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#f3dfc3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx=".5" cy=".45" r=".72">
+      <stop offset=".42" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0b0907" stop-opacity=".64"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="3" seed="404" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.1"/></filter>
+    <filter id="soft2"><feGaussianBlur stdDeviation="2.8"/></filter>
+    <filter id="shadow"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#wall)"/>
+
+  <!-- 旧教室 / 走廊的窗与墙裙 -->
+  <g opacity=".8">
+    <rect x="35" y="62" width="236" height="270" fill="#b7b09b"/>
+    <rect x="48" y="75" width="210" height="244" fill="#cfc7ae"/>
+    <rect x="48" y="75" width="210" height="244" fill="url(#windowLight)"/>
+    <g stroke="#6a6658" stroke-width="6">
+      <path d="M153 75 L153 319 M48 192 L258 192"/>
+      <path d="M48 75 L258 319" opacity=".25"/>
+    </g>
+    <rect x="48" y="75" width="210" height="244" fill="none" stroke="#575448" stroke-width="9"/>
+    <rect x="0" y="395" width="800" height="205" fill="#59584c" opacity=".55"/>
+    <path d="M0 395 L800 395" stroke="#47453c" stroke-width="4"/>
+    <g stroke="#444238" stroke-width="2" opacity=".5">
+      <path d="M0 462 L800 462 M0 535 L800 535"/>
+      <path d="M110 395 L110 600 M310 395 L310 600 M510 395 L510 600 M710 395 L710 600"/>
+    </g>
+  </g>
+
+  <!-- 右侧门框 / 走廊深处 -->
+  <g opacity=".72">
+    <rect x="654" y="90" width="120" height="315" fill="#49473d"/>
+    <rect x="668" y="104" width="92" height="287" fill="#1f211c"/>
+    <path d="M668 104 L760 104 L760 391 L668 391 Z" fill="none" stroke="#6b6758" stroke-width="3"/>
+    <circle cx="744" cy="250" r="3" fill="#9a8b68"/>
+    <text x="716" y="238" font-family="Courier New, monospace" font-size="14" fill="#726b58" opacity=".45">404</text>
+  </g>
+
+  <!-- 人物 -->
+  <g>
+    <!-- 地面影子 -->
+    <ellipse cx="400" cy="582" rx="180" ry="22" fill="#15140f" opacity=".45" filter="url(#shadow)"/>
+
+    <!-- 白棉袄 -->
+    <path d="M305 342 Q400 310 495 342 L548 600 L252 600 Z" fill="url(#coat)"/>
+    <path d="M305 342 Q400 310 495 342 L495 600 L305 600 Z" fill="#ddd8c8" opacity=".3"/>
+    <path d="M314 380 Q400 350 486 380" fill="none" stroke="#8f8a79" stroke-width="2" opacity=".55"/>
+    <path d="M300 452 Q400 424 500 452" fill="none" stroke="#8d8877" stroke-width="2" opacity=".48"/>
+    <path d="M294 524 Q400 498 506 524" fill="none" stroke="#8c8776" stroke-width="2" opacity=".42"/>
+    <path d="M400 334 L400 600" stroke="#a5a08e" stroke-width="2" opacity=".7"/>
+    <path d="M400 400 L392 600 M400 400 L410 600" stroke="#9c9785" stroke-width="1.5" opacity=".35"/>
+    <circle cx="400" cy="394" r="5" fill="#8b8571" opacity=".8"/>
+    <circle cx="400" cy="464" r="5" fill="#8b8571" opacity=".7"/>
+    <circle cx="400" cy="534" r="5" fill="#8b8571" opacity=".65"/>
+
+    <!-- 衣领 -->
+    <path d="M350 334 Q400 360 450 334 L466 370 Q400 398 334 370 Z" fill="#f0ebdb"/>
+    <path d="M350 334 Q400 360 450 334" fill="none" stroke="#a9a492" stroke-width="2"/>
+
+    <!-- 脖子 -->
+    <path d="M368 288 L368 340 Q400 358 432 340 L432 288 Z" fill="#bca286"/>
+
+    <!-- 头发后层 -->
+    <path d="M323 218 Q318 140 352 119 Q397 94 444 119 Q480 140 477 218 L470 292 Q459 301 449 286 L447 239 Q430 255 401 257 Q368 256 349 238 L348 292 Q335 301 327 285 Z" fill="#1c1b16"/>
+
+    <!-- 脸 -->
+    <ellipse cx="400" cy="226" rx="72" ry="88" fill="url(#skin)"/>
+    <ellipse cx="400" cy="226" rx="72" ry="88" fill="url(#faceLight)"/>
+    <path d="M332 222 Q334 154 400 143 Q466 154 468 222 L462 260 Q439 296 400 299 Q361 296 338 260 Z" fill="#d3ba9e" opacity=".35"/>
+
+    <!-- 耳朵 -->
+    <path d="M330 220 Q316 215 318 239 Q320 256 332 252 Z" fill="#baa084"/>
+    <path d="M470 220 Q484 215 482 239 Q480 256 468 252 Z" fill="#b69b7d"/>
+
+    <!-- 刘海 -->
+    <path d="M329 201 Q328 146 367 129 Q397 117 434 128 Q469 143 471 199 Q450 183 435 166 Q421 192 399 194 Q371 194 355 169 Q343 188 329 201 Z" fill="#191812"/>
+    <path d="M337 200 Q347 178 358 174 Q367 195 382 201 Q364 211 348 216 Z" fill="#222019"/>
+    <path d="M432 168 Q447 181 462 200 Q451 211 438 216 Q428 194 419 188 Z" fill="#222019"/>
+
+    <!-- 眉毛 -->
+    <path d="M357 211 Q371 204 385 210" fill="none" stroke="#564536" stroke-width="3" opacity=".7" stroke-linecap="round"/>
+    <path d="M414 210 Q429 204 442 211" fill="none" stroke="#564536" stroke-width="3" opacity=".7" stroke-linecap="round"/>
+
+    <!-- 眼睛 -->
+    <g opacity=".86">
+      <path d="M356 228 Q370 219 386 228 Q370 238 356 228 Z" fill="#e7ddcd"/>
+      <circle cx="371" cy="228" r="6" fill="#2c241c"/>
+      <circle cx="373" cy="226" r="1.8" fill="#d8d0c0" opacity=".8"/>
+      <path d="M356 228 Q370 219 386 228" fill="none" stroke="#4a3a2c" stroke-width="1.8"/>
+      <path d="M414 228 Q430 219 444 228 Q430 238 414 228 Z" fill="#e7ddcd"/>
+      <circle cx="429" cy="228" r="6" fill="#2c241c"/>
+      <circle cx="427" cy="226" r="1.8" fill="#d8d0c0" opacity=".8"/>
+      <path d="M414 228 Q430 219 444 228" fill="none" stroke="#4a3a2c" stroke-width="1.8"/>
+    </g>
+
+    <!-- 鼻子与嘴 -->
+    <path d="M399 232 Q395 247 399 255 Q403 259 409 256" fill="none" stroke="#9e8065" stroke-width="2" opacity=".62" stroke-linecap="round"/>
+    <path d="M386 271 Q400 269 414 271" fill="none" stroke="#844c48" stroke-width="2.4" opacity=".74" stroke-linecap="round"/>
+    <path d="M390 273 Q400 274 410 272" fill="none" stroke="#6f3936" stroke-width="1" opacity=".3"/>
+    <path d="M378 258 Q386 262 393 258 M407 258 Q414 262 422 258" fill="none" stroke="#ad8d71" stroke-width="2" opacity=".3"/>
+
+    <!-- 没睡好留下的阴影 -->
+    <path d="M355 244 Q371 250 387 243" fill="none" stroke="#816b58" stroke-width="2" opacity=".24"/>
+    <path d="M413 244 Q429 250 445 243" fill="none" stroke="#816b58" stroke-width="2" opacity=".24"/>
+    <path d="M357 260 Q369 264 382 260" fill="none" stroke="#9d7f67" stroke-width="1.4" opacity=".18"/>
+    <path d="M418 260 Q431 264 443 260" fill="none" stroke="#9d7f67" stroke-width="1.4" opacity=".18"/>
+
+    <!-- 眼下的青灰 -->
+    <ellipse cx="371" cy="243" rx="21" ry="7" fill="#7f6c5b" opacity=".16"/>
+    <ellipse cx="429" cy="243" rx="21" ry="7" fill="#7f6b5a" opacity=".16"/>
+
+    <!-- 前层头发 -->
+    <path d="M327 211 Q326 164 350 140 Q377 116 406 117 Q441 119 458 143 Q475 167 472 210 Q463 189 454 181 Q445 199 430 210 Q414 219 399 218 Q381 218 366 208 Q350 198 343 180 Q334 190 327 211 Z" fill="#14130f" opacity=".92"/>
+    <path d="M330 212 Q336 269 344 289 L327 292 Q318 249 323 205 Z" fill="#171610"/>
+    <path d="M470 212 Q464 269 456 289 L473 292 Q482 249 477 205 Z" fill="#171610"/>
+
+    <!-- 右手拿着一张红纸 -->
+    <path d="M507 461 Q542 472 548 519 Q550 548 525 559 Q494 566 482 538 Q470 509 486 485 Q491 470 507 461 Z" fill="#cbbfa8"/>
+    <path d="M505 474 Q531 480 536 512 Q540 535 522 543 Q502 548 494 528 Q485 507 496 487 Z" fill="#d6cab4"/>
+    <path d="M499 492 L528 499 L530 529 L500 522 Z" fill="#8f2420"/>
+    <path d="M506 501 L522 505 M506 511 L522 515" stroke="#d8b6a2" stroke-width="1.2" opacity=".6"/>
+
+    <!-- 左手臂垂下 -->
+    <path d="M296 354 Q278 424 276 513 Q276 550 298 558 Q318 562 327 541 Q334 519 322 490 Q310 451 322 394 Z" fill="#d2cdbc"/>
+    <path d="M296 354 Q278 424 276 513" fill="none" stroke="#96917f" stroke-width="2" opacity=".4"/>
+  </g>
+
+  <!-- 曝光、划痕、污渍 -->
+  <rect width="800" height="600" fill="url(#windowLight)" opacity=".2"/>
+  <g stroke="#f6eed8" opacity=".28">
+    <path d="M32 112 L48 282" stroke-width="1"/>
+    <path d="M702 60 L696 174" stroke-width="1.2"/>
+    <path d="M194 334 L258 372" stroke-width=".8"/>
+    <path d="M588 472 L656 492" stroke-width=".8"/>
+    <path d="M487 128 L515 202" stroke-width=".6"/>
+  </g>
+  <g stroke="#2e2a22" opacity=".37">
+    <path d="M64 520 L145 507" stroke-width="1"/>
+    <path d="M546 116 L614 124" stroke-width="1"/>
+    <path d="M121 74 L120 146" stroke-width=".8"/>
+    <path d="M618 342 L676 336" stroke-width=".8"/>
+  </g>
+  <g fill="#6e5b46" opacity=".12">
+    <circle cx="564" cy="206" r="26"/><circle cx="585" cy="220" r="18"/><circle cx="550" cy="230" r="13"/>
+  </g>
+
+  <rect width="800" height="600" filter="url(#noise)" opacity=".33" style="mix-blend-mode:multiply"/>
+  <rect width="800" height="600" fill="url(#vignette)"/>
+
+  <!-- 档案戳 -->
+  <g transform="rotate(-4 112 534)" opacity=".58">
+    <rect x="44" y="505" width="132" height="56" fill="none" stroke="#8b1717" stroke-width="3"/>
+    <text x="110" y="531" text-anchor="middle" font-family="SimSun, serif" font-size="16" fill="#8b1717" letter-spacing="4">槐安里</text>
+    <text x="110" y="550" text-anchor="middle" font-family="SimSun, serif" font-size="9" fill="#8b1717" letter-spacing="2">居民档案 · 翻拍</text>
+  </g>
+
+  <g opacity=".62" font-family="Courier New, monospace" fill="#e3d2ad" font-size="12">
+    <text x="748" y="556" text-anchor="end">1999. 12. 31</text>
+    <text x="748" y="574" text-anchor="end" font-family="SimSun, serif" font-size="9" letter-spacing="2">底片编号 099</text>
+  </g>
+</svg>

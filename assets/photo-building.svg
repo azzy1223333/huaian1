@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="槐安里七号楼">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9da49b"/><stop offset=".62" stop-color="#7c847a"/><stop offset="1" stop-color="#4e554d"/>
+    </linearGradient>
+    <linearGradient id="facade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8c8878"/><stop offset=".55" stop-color="#777367"/><stop offset="1" stop-color="#555249"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#252a26"/><stop offset="1" stop-color="#101310"/>
+    </linearGradient>
+    <radialGradient id="light" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#e8b35f" stop-opacity=".7"/><stop offset="1" stop-color="#e8b35f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx=".5" cy=".5" r=".75">
+      <stop offset=".5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#050706" stop-opacity=".7"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="9" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <!-- 楼体 -->
+  <g>
+    <path d="M175 72 L665 112 L647 530 L196 530 Z" fill="url(#facade)"/>
+    <path d="M175 72 L665 112 L662 132 L176 92 Z" fill="#666357"/>
+    <path d="M196 530 L647 530 L651 545 L190 545 Z" fill="#3d3b34"/>
+    <!-- 窗格 -->
+    <g fill="url(#win)" stroke="#5d5a4f" stroke-width="2">
+      <g transform="translate(0,0)">
+        <rect x="215" y="145" width="58" height="50"/><rect x="297" y="151" width="58" height="50"/><rect x="379" y="158" width="58" height="50"/>
+        <rect x="461" y="164" width="58" height="50"/><rect x="543" y="171" width="58" height="50"/><rect x="625" y="178" width="46" height="48"/>
+        <rect x="212" y="226" width="58" height="50"/><rect x="294" y="233" width="58" height="50"/><rect x="376" y="240" width="58" height="50"/>
+        <rect x="458" y="247" width="58" height="50"/><rect x="540" y="254" width="58" height="50"/><rect x="622" y="261" width="46" height="48"/>
+        <rect x="209" y="307" width="58" height="50"/><rect x="291" y="314" width="58" height="50"/><rect x="373" y="321" width="58" height="50"/>
+        <rect x="455" y="328" width="58" height="50" fill="#171b17"/><rect x="537" y="335" width="58" height="50"/><rect x="619" y="342" width="46" height="48"/>
+        <rect x="206" y="388" width="58" height="50"/><rect x="288" y="395" width="58" height="50"/><rect x="370" y="402" width="58" height="50"/>
+        <rect x="452" y="409" width="58" height="50"/><rect x="534" y="416" width="58" height="50"/><rect x="616" y="423" width="46" height="48"/>
+      </g>
+    </g>
+    <!-- 阳台栏杆 -->
+    <g stroke="#4f4d44" stroke-width="3" opacity=".9">
+      <path d="M204 200 L654 240"/><path d="M201 281 L651 321"/><path d="M198 362 L648 402"/><path d="M195 443 L645 483"/>
+    </g>
+    <!-- 唯一亮着的窗 -->
+    <g>
+      <rect x="455" y="328" width="58" height="50" fill="#3b2c19"/>
+      <rect x="455" y="328" width="58" height="50" fill="url(#light)"/>
+      <text x="484" y="359" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#d6b477">404</text>
+    </g>
+    <!-- 单元门 -->
+    <g>
+      <rect x="375" y="466" width="82" height="64" fill="#1d211d" stroke="#575349" stroke-width="2"/>
+      <path d="M386 530 L386 484 Q416 470 446 484 L446 530" fill="#2d332c"/>
+      <circle cx="435" cy="506" r="2.5" fill="#8f7d55"/>
+    </g>
+    <!-- 楼号 -->
+    <text x="228" y="128" font-family="SimHei, sans-serif" font-size="28" fill="#4e4b42" opacity=".8">7</text>
+  </g>
+  <!-- 枯树 -->
+  <g stroke="#2f332d" fill="none" stroke-linecap="round">
+    <path d="M112 545 Q104 452 121 360 Q132 299 102 239" stroke-width="13"/>
+    <path d="M119 384 Q82 355 50 362 M113 345 Q144 311 186 318 M108 301 Q86 271 83 231 M122 420 Q154 388 190 390" stroke-width="5"/>
+    <path d="M102 286 Q120 252 111 211 M53 362 Q33 346 19 319" stroke-width="3"/>
+  </g>
+  <!-- 电线 -->
+  <g stroke="#262a26" stroke-width="2" fill="none" opacity=".8">
+    <path d="M0 155 Q220 210 400 195 T800 236"/>
+    <path d="M0 178 Q220 234 405 217 T800 259"/>
+  </g>
+  <!-- 地面与自行车 -->
+  <rect y="530" width="800" height="70" fill="#3f443d"/>
+  <g stroke="#242822" fill="none" stroke-width="3">
+    <circle cx="655" cy="520" r="18"/><circle cx="724" cy="520" r="18"/>
+    <path d="M655 520 L682 484 L705 484 L724 520 M682 484 L694 520 L655 520 M671 484 L664 468 M700 481 L710 460"/>
+    <path d="M699 473 L716 459" stroke-width="2"/>
+  </g>
+  <!-- 雾与漏光 -->
+  <rect y="360" width="800" height="170" fill="#b4b9a9" opacity=".09"/>
+  <rect width="800" height="600" filter="url(#noise)" opacity=".3" style="mix-blend-mode:multiply"/>
+  <rect width="800" height="600" fill="url(#vignette)"/>
+  <text x="746" y="574" text-anchor="end" font-family="Courier New, monospace" font-size="12" fill="#c5b58e" opacity=".55">2000.01.01  06:12</text>
+</svg>

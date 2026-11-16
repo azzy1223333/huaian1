@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="通向防空洞的水泥台阶">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22261f"/><stop offset=".58" stop-color="#0d100c"/><stop offset="1" stop-color="#020302"/>
+    </linearGradient>
+    <linearGradient id="stair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6f7262"/><stop offset=".5" stop-color="#414438"/><stop offset="1" stop-color="#161813"/>
+    </linearGradient>
+    <radialGradient id="bulb" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#eee5bd" stop-opacity=".85"/><stop offset=".25" stop-color="#b6ad87" stop-opacity=".35"/><stop offset="1" stop-color="#b6ad87" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="void" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#000"/><stop offset=".72" stop-color="#030403"/><stop offset="1" stop-color="#0d0f0b"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx=".5" cy=".45" r=".7">
+      <stop offset=".35" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".82"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="66" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.8"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- 入口框 -->
+  <path d="M115 70 L685 70 L685 210 L115 210 Z" fill="#32362b"/>
+  <path d="M150 100 L650 100 L650 210 L150 210 Z" fill="#0b0d0a"/>
+  <!-- 台阶透视 -->
+  <g>
+    <path d="M142 212 L658 212 L742 568 L58 568 Z" fill="url(#stair)"/>
+    <g fill="none" stroke="#1b1e17" stroke-width="2">
+      <path d="M154 248 L646 248 M168 292 L632 292 M186 344 L614 344 M208 404 L592 404 M236 474 L564 474 M272 552 L528 552"/>
+      <path d="M142 212 L58 568 M658 212 L742 568 M118 212 L20 568 M682 212 L780 568"/>
+    </g>
+    <!-- 台阶高光 -->
+    <g stroke="#9a9a82" opacity=".22" stroke-width="2">
+      <path d="M154 246 L646 246"/><path d="M186 342 L614 342"/><path d="M236 472 L564 472"/>
+    </g>
+  </g>
+  <!-- 门洞与黑暗 -->
+  <path d="M300 212 L500 212 L500 400 L300 400 Z" fill="url(#void)"/>
+  <path d="M318 212 L482 212 L482 392 L318 392 Z" fill="#000"/>
+  <path d="M300 212 L500 212 L500 400 L300 400 Z" fill="none" stroke="#4b4f3f" stroke-width="3"/>
+  <!-- 灯泡 -->
+  <g>
+    <circle cx="400" cy="160" r="110" fill="url(#bulb)" filter="url(#glow)" opacity=".8"/>
+    <path d="M400 72 L400 140" stroke="#555a49" stroke-width="2"/>
+    <circle cx="400" cy="150" r="7" fill="#f2e7b8"/>
+  </g>
+  <!-- 扶手 -->
+  <path d="M132 226 L286 424 M668 226 L514 424" stroke="#5e5b4a" stroke-width="5" fill="none"/>
+  <path d="M140 226 L140 284 M660 226 L660 284" stroke="#4c4a3c" stroke-width="4"/>
+  <!-- 墙上的编号 -->
+  <text x="353" y="324" font-family="Courier New, monospace" font-size="61" fill="#4f5244" opacity=".55">404</text>
+  <g transform="rotate(-5 606 325)" opacity=".5">
+    <text x="560" y="325" font-family="SimSun, serif" font-size="14" fill="#7e735b">她就在下面</text>
+  </g>
+  <!-- 小鞋 -->
+  <g transform="translate(490 470) rotate(24)" opacity=".8">
+    <path d="M0 0 Q26 -5 40 8 L45 24 L-4 24 Q-12 12 0 0 Z" fill="#7c3030"/>
+    <path d="M2 17 L42 17" stroke="#b78d6f" stroke-width="2"/>
+  </g>
+  <!-- 灰烬 -->
+  <g fill="#a5a18b" opacity=".25">
+    <circle cx="340" cy="430" r="1.2"/><circle cx="512" cy="448" r="1"/><circle cx="463" cy="392" r="1.4"/>
+    <circle cx="368" cy="502" r="1"/><circle cx="540" cy="512" r=".8"/><circle cx="260" cy="360" r="1"/>
+  </g>
+  <rect width="800" height="600" filter="url(#noise)" opacity=".36" style="mix-blend-mode:multiply"/>
+  <rect width="800" height="600" fill="url(#vignette)"/>
+  <text x="40" y="570" font-family="Courier New, monospace" font-size="11" fill="#8f8c78" opacity=".5">B2  /  NO SIGNAL</text>
+</svg>

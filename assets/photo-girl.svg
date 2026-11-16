@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="走廊尽头的女孩背影">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#20251f"/><stop offset=".6" stop-color="#0e110d"/><stop offset="1" stop-color="#040504"/>
+    </linearGradient>
+    <radialGradient id="light" cx=".5" cy=".32" r=".55">
+      <stop offset="0" stop-color="#d9d5b5" stop-opacity=".2"/><stop offset="1" stop-color="#d9d5b5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx=".5" cy=".45" r=".72">
+      <stop offset=".38" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".82"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" seed="101" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="2.3"/></filter>
+    <filter id="soft2"><feGaussianBlur stdDeviation=".8"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- 走廊透视 -->
+  <path d="M0 0 L330 232 L330 420 L0 600 Z" fill="#20251f"/>
+  <path d="M800 0 L470 232 L470 420 L800 600 Z" fill="#1b201a"/>
+  <path d="M330 232 L470 232 L470 420 L330 420 Z" fill="#090b09"/>
+  <path d="M0 600 L330 420 L470 420 L800 600 Z" fill="#171a15"/>
+  <path d="M0 0 L800 0 L470 232 L330 232 Z" fill="#292e26"/>
+  <rect width="800" height="600" fill="url(#light)"/>
+  <!-- 门洞 -->
+  <g fill="#111510" stroke="#363d31" stroke-width="2">
+    <path d="M90 170 L185 201 L185 430 L90 485 Z"/>
+    <path d="M220 218 L288 239 L288 414 L220 438 Z"/>
+    <path d="M615 170 L710 150 L710 485 L615 430 Z"/>
+    <path d="M512 218 L580 239 L580 414 L512 438 Z"/>
+  </g>
+  <path d="M515 218 L577 238 L577 412 L515 436 Z" fill="#4e1714" opacity=".8"/>
+  <text x="548" y="325" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#b59262" opacity=".5">404</text>
+  <!-- 地砖 -->
+  <g stroke="#4f5547" opacity=".25">
+    <path d="M0 600 L330 420 M800 600 L470 420 M180 600 L355 420 M620 600 L445 420"/>
+    <path d="M0 548 L800 548 M0 500 L800 500 M100 462 L700 462"/>
+  </g>
+  <!-- 女孩 -->
+  <g filter="url(#soft2)">
+    <!-- 影子 -->
+    <ellipse cx="400" cy="452" rx="47" ry="13" fill="#000" opacity=".6" filter="url(#soft)"/>
+    <!-- 腿 -->
+    <path d="M388 382 L384 448 L393 448 L397 390 Z" fill="#b8b4a0"/>
+    <path d="M407 390 L410 448 L419 448 L414 382 Z" fill="#aaa692"/>
+    <!-- 白棉袄 -->
+    <path d="M368 285 Q400 267 432 285 L444 388 Q400 404 356 388 Z" fill="#cecab5"/>
+    <path d="M368 285 Q400 272 432 285 L428 315 Q400 302 372 315 Z" fill="#dad6c2"/>
+    <!-- 袖 -->
+    <path d="M372 292 Q346 330 349 374 L359 382 Q361 336 382 310 Z" fill="#bfbaa5"/>
+    <path d="M428 292 Q454 330 451 374 L441 382 Q439 336 418 310 Z" fill="#bfbaa5"/>
+    <!-- 手 -->
+    <circle cx="353" cy="385" r="7" fill="#c4b6a0"/>
+    <circle cx="447" cy="385" r="7" fill="#c4b6a0"/>
+    <!-- 红纸 -->
+    <path d="M347 382 L365 390 L361 415 L343 405 Z" fill="#8f2420"/>
+    <!-- 头 -->
+    <ellipse cx="400" cy="267" rx="27" ry="30" fill="#151611"/>
+    <path d="M373 264 Q371 234 400 230 Q429 234 427 264 L423 276 Q400 261 377 276 Z" fill="#202119"/>
+    <!-- 脖子 -->
+    <rect x="391" y="289" width="18" height="14" fill="#bcae98"/>
+    <!-- 头发盖住侧脸的一点点 -->
+    <path d="M374 263 Q381 280 390 285 L374 292 Z" fill="#171813"/>
+    <!-- 鞋 -->
+    <path d="M379 448 Q385 442 393 448 L394 456 L378 456 Z" fill="#5d2a26"/>
+    <path d="M405 448 Q412 442 420 448 L421 456 L404 456 Z" fill="#5d2a26"/>
+    <!-- 白色衣角 -->
+    <path d="M359 386 Q376 394 389 394 L384 408 Q369 405 356 397 Z" fill="#c7c2ad"/>
+  </g>
+  <!-- 墙上的划痕 -->
+  <g stroke="#706b58" opacity=".3" stroke-width="1">
+    <path d="M95 240 L95 326"/><path d="M101 240 L101 326"/><path d="M107 240 L107 326"/>
+    <path d="M688 250 L688 344"/><path d="M694 250 L694 344"/>
+    <path d="M125 340 L180 329 M626 360 L670 370"/>
+  </g>
+  <!-- 胶卷信息 -->
+  <g opacity=".45" fill="#a39e88" font-family="Courier New, monospace" font-size="10">
+    <text x="34" y="554">12/31/1999 23:59:58</text>
+    <text x="766" y="554" text-anchor="end">FLASH OFF</text>
+  </g>
+  <rect width="800" height="600" filter="url(#noise)" opacity=".34" style="mix-blend-mode:multiply"/>
+  <rect width="800" height="600" fill="url(#vignette)"/>
+</svg>

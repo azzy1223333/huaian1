@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="文明小区表彰会留影">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b4ab92"/><stop offset="1" stop-color="#7c7664"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#948d78"/><stop offset="1" stop-color="#6c6758"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx=".5" cy=".5" r=".72">
+      <stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="3" seed="120" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.4"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect y="70" width="800" height="350" fill="url(#wall)"/>
+  <!-- 横幅 -->
+  <rect x="80" y="96" width="640" height="62" fill="#7a1d1b"/>
+  <rect x="88" y="103" width="624" height="48" fill="none" stroke="#d3b47a" stroke-width="1"/>
+  <text x="400" y="135" text-anchor="middle" font-family="SimSun, serif" font-size="26" fill="#e2cca1" letter-spacing="6">槐安里文明小区表彰大会</text>
+  <!-- 主席台 -->
+  <rect x="60" y="420" width="680" height="26" fill="#504535"/>
+  <rect x="60" y="446" width="680" height="110" fill="#3e3528"/>
+  <!-- 人物 -->
+  <g stroke="#3c352b" stroke-width="1">
+    <g fill="#4f4a3e">
+      <circle cx="150" cy="326" r="19"/><path d="M121 354 Q150 335 179 354 L190 432 L110 432 Z"/>
+      <circle cx="240" cy="318" r="18"/><path d="M212 345 Q240 327 268 345 L279 430 L201 430 Z"/>
+      <circle cx="330" cy="326" r="19"/><path d="M301 354 Q330 335 359 354 L370 432 L290 432 Z"/>
+      <circle cx="421" cy="318" r="18"/><path d="M393 345 Q421 327 449 345 L460 430 L382 430 Z"/>
+      <circle cx="511" cy="326" r="19"/><path d="M482 354 Q511 335 540 354 L551 432 L471 432 Z"/>
+      <circle cx="601" cy="319" r="18"/><path d="M573 346 Q601 328 629 346 L640 430 L562 430 Z"/>
+      <circle cx="688" cy="328" r="18"/><path d="M661 355 Q688 337 715 355 L726 432 L650 432 Z"/>
+    </g>
+    <g fill="#625b49">
+      <circle cx="104" cy="378" r="15"/><path d="M82 399 Q104 386 126 399 L133 458 L75 458 Z"/>
+      <circle cx="184" cy="382" r="15"/><path d="M162 403 Q184 390 206 403 L213 458 L155 458 Z"/>
+      <circle cx="266" cy="376" r="15"/><path d="M244 397 Q266 384 288 397 L295 458 L237 458 Z"/>
+      <circle cx="348" cy="383" r="15"/><path d="M326 404 Q348 391 370 404 L377 458 L319 458 Z"/>
+      <circle cx="430" cy="376" r="15"/><path d="M408 397 Q430 384 452 397 L459 458 L401 458 Z"/>
+      <circle cx="514" cy="382" r="15"/><path d="M492 403 Q514 390 536 403 L543 458 L485 458 Z"/>
+      <circle cx="596" cy="376" r="15"/><path d="M574 397 Q596 384 618 397 L625 458 L567 458 Z"/>
+      <circle cx="678" cy="382" r="15"/><path d="M656 403 Q678 390 700 403 L707 458 L649 458 Z"/>
+    </g>
+  </g>
+  <!-- 红色胸花 -->
+  <g fill="#8b1d1b">
+    <circle cx="140" cy="385" r="4"/><circle cx="230" cy="379" r="4"/><circle cx="320" cy="385" r="4"/>
+    <circle cx="411" cy="379" r="4"/><circle cx="501" cy="385" r="4"/><circle cx="591" cy="380" r="4"/><circle cx="678" cy="387" r="4"/>
+  </g>
+  <!-- 奖牌 -->
+  <g fill="#c0a15f" stroke="#7c6638" stroke-width="1">
+    <rect x="283" y="382" width="90" height="58"/>
+    <text x="328" y="418" text-anchor="middle" font-family="SimSun, serif" font-size="17" fill="#6d201a">文明小区</text>
+  </g>
+  <!-- 地上的鞋子 -->
+  <g transform="translate(522 526)" opacity=".82" filter="url(#soft)">
+    <path d="M0 0 Q25 -5 39 8 L44 23 L-4 23 Q-12 12 0 0 Z" fill="#6f2d28"/>
+    <path d="M2 16 L41 16" stroke="#b38d6e" stroke-width="2"/>
+  </g>
+  <text x="500" y="560" font-family="Courier New, monospace" font-size="11" fill="#4b4133" opacity=".55">这张照片的右下角，没有人注意到。</text>
+  <rect width="800" height="600" filter="url(#noise)" opacity=".3" style="mix-blend-mode:multiply"/>
+  <rect width="800" height="600" fill="url(#vignette)"/>
+  <text x="760" y="574" text-anchor="end" font-family="Courier New, monospace" font-size="11" fill="#d5c9a9" opacity=".55">2000.01.08  槐安日报</text>
+</svg>
